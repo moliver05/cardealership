@@ -1,0 +1,9 @@
+<h1>Cars For Sale</h1>
+<ul>
+@foreach(var car in Model)
+{
+<li>@car.GetDescription()</li>
+}
+
+</ul>
+<a href="/cars/new">Add a new car.</a>

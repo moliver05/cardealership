@@ -3,61 +3,71 @@ using System.Collections;
 
 namespace CarDealership.Models
 {
-  public class Item
+  public class Car
   {
-    private string _carSale;
-    private static List<Item> _instances = new List<Item> {};
+    private static List<Car> _instances = new List<Car> {};
 
-    public Item (string carSale)
+    private string _CarName;
+    private string _CarModel;
+    private string _CarPrice;
+    private string _CarMiles;
+    private string _CarYear;
+
+    public Car (string carName, string carModel, string carPrice, string carMiles, string carYear)
     {
-      _carSale = carSale;
+      _CarName = carName;
+      _CarModel = carModel;
+      _CarPrice = carPrice;
+      _CarMiles = carMiles;
+      _CarYear = carYear;
+
     }
     public string GetDescription()
     {
-      return _carSale;
+      return _CarName;
     }
-    public void SetDescription(string newcarSale)
+    public void SetDescription(string newcarName)
     {
-      _carSale = newcarSale;
+      _CarName = newcarName;
     }
 
     public string GetModel()
     {
-      return _carModel;
+      return _CarModel;
     }
     public void SetModel(string newcarModel)
     {
-      _carModel = newcarModel;
+      _CarModel = newcarModel;
     }
 
-    public int GetPrice()
+    public string GetPrice()
     {
-      return _carPrice;
+      return _CarPrice;
     }
-    public void SetPrice(int newcarPrice)
+    public void SetPrice(string newcarPrice)
     {
-      _carPrice = newcarPrice;
+      _CarPrice = newcarPrice;
     }
 
-    public int GetMiles()
+    public string GetMiles()
     {
-      return _carMiles;
+      return _CarMiles;
     }
     public void SetMiles(string newcarMiles)
     {
-      _carMiles = newcarMiles;
+      _CarMiles = newcarMiles;
     }
 
     public string GetYear()
     {
-      return _carYear;
+      return _CarYear;
     }
     public void SetYear(string newcarYear)
     {
-      _carYear = newcarYear;
+      _CarYear = newcarYear;
     }
 
-    public static List<Item> GetAll()
+    public static List<Car> GetAll()
     {
       return _instances;
     }
@@ -71,6 +81,8 @@ namespace CarDealership.Models
     }
    }
   }
+
+
 
 // public class Program
 // {
@@ -104,7 +116,7 @@ namespace CarDealership.Models
     //
     // Console.WriteLine("Enter maximum price: ");
     // string stringMaxPrice = Console.ReadLine();
-    // int maxPrice = int.Parse(stringMaxPrice);
+    // string maxPrice = int.Parse(stringMaxPrice);
     //
     //
     // Console.WriteLine("Enter maximum miles: ");
