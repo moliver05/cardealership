@@ -11,7 +11,7 @@ public class CarsController : Controller
   [HttpGet("/cars")]
   public ActionResult Index()
   {
-      List<Car> allCars = Car.GetAll();
+      List<Car> allCars = new List<Car> {};
       return View(allCars);
   }
 
@@ -29,6 +29,5 @@ public class CarsController : Controller
       List<Car> allCars = Car.GetAll();
       return View("Index", allCars);
   }
-
  }
 }
