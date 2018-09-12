@@ -2,8 +2,7 @@
 <ul>
 @foreach(var car in Model)
 {
-<li>@car.GetDescription()</li>
+<li>Make: @car.GetCarMake() | Year: @car.GetModel() | Price: @car.GetPrice() | Miles: @car.GetMiles | Year: @car.GetYear()</li>
 }
-
 </ul>
 <a href="/cars/new">Add a new car.</a>

@@ -5,66 +5,65 @@ namespace CarDealership.Models
 {
   public class Car
   {
-    private static List<Car> _instances = new List<Car> {};
+    private string _carMake;
+    private string _carModel;
+    private string _carPrice;
+    private string _carMiles;
+    private string _carYear;
+    private static List<Car> _instances = new List<Car> (){};
 
-    private string _CarName;
-    private string _CarModel;
-    private string _CarPrice;
-    private string _CarMiles;
-    private string _CarYear;
-
-    public Car (string carName, string carModel, string carPrice, string carMiles, string carYear)
+    public Car (string carMake, string carModel, string carPrice, string carMiles, string carYear)
     {
-      _CarName = carName;
-      _CarModel = carModel;
-      _CarPrice = carPrice;
-      _CarMiles = carMiles;
-      _CarYear = carYear;
+      _carMake = carMake;
+      _carModel = carModel;
+      _carPrice = carPrice;
+      _carMiles = carMiles;
+      _carYear = carYear;
 
     }
-    public string GetDescription()
+    public string GetCarMake()
     {
-      return _CarName;
+      return _carMake;
     }
-    public void SetDescription(string newcarName)
+    public void SetCarMake(string newcarMake)
     {
-      _CarName = newcarName;
+      _carMake = newcarMake;
     }
 
     public string GetModel()
     {
-      return _CarModel;
+      return _carModel;
     }
     public void SetModel(string newcarModel)
     {
-      _CarModel = newcarModel;
+      _carModel = newcarModel;
     }
 
     public string GetPrice()
     {
-      return _CarPrice;
+      return _carPrice;
     }
     public void SetPrice(string newcarPrice)
     {
-      _CarPrice = newcarPrice;
+      _carPrice = newcarPrice;
     }
 
     public string GetMiles()
     {
-      return _CarMiles;
+      return _carMiles;
     }
     public void SetMiles(string newcarMiles)
     {
-      _CarMiles = newcarMiles;
+      _carMiles = newcarMiles;
     }
 
     public string GetYear()
     {
-      return _CarYear;
+      return _carYear;
     }
     public void SetYear(string newcarYear)
     {
-      _CarYear = newcarYear;
+      _carYear = newcarYear;
     }
 
     public static List<Car> GetAll()

@@ -8,20 +8,20 @@ namespace CarDealership.Controllers
 public class CarsController : Controller
 {
 
-  [HttpGet("/car")]
+  [HttpGet("/cars")]
   public ActionResult Index()
   {
-      List<Car> allCars = new List<Car> {};
+      List<Car> allCars = Car.GetAll();
       return View(allCars);
   }
 
-  [HttpGet("/Cars/car_form")]
+  [HttpGet("/cars/car")]
   public ActionResult CreateForm()
   {
       return View();
   }
 
-  [HttpPost("/car")]
+  [HttpPost("/cars")]
   public ActionResult Create()
   {
       Car newCar = new Car(Request.Form["car-name"], Request.Form["car-model"], Request.Form["car-price"], Request.Form["car-miles"], Request.Form["car-year"]);
