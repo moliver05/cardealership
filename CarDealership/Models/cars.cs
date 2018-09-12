@@ -74,10 +74,10 @@ namespace CarDealership.Models
     {
       _instances.Add(this);
     }
-    public static void ClearAll()
-    {
-      _instances.Clear();
-    }
+    // public static void ClearAll()
+    // {
+    //   _instances.Clear();
+    // }
    }
   }
 
